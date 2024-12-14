@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DobrinCatalinaLab7.ShopPage"
+             Title="Shop Details">
+    <ContentPage.Content>
+        <StackLayout Margin="20" Spacing="15">
+            
+            <Label Text="Shop Name:" FontAttributes="Bold" FontSize="16" />
+            <Editor Placeholder="Enter shop name" 
+                    Text="{Binding ShopName}" 
+                    HeightRequest="50" />
+
+            
+            <Label Text="Shop Address:" FontAttributes="Bold" FontSize="16" />
+            <Editor Placeholder="Enter shop address" 
+                    Text="{Binding Adress}" 
+                    HeightRequest="50" />
+
+            
+            <Grid ColumnSpacing="10" RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+               
+                <Button Text="Save Shop" 
+                        Grid.Row="0" 
+                        Grid.Column="0" 
+                        BackgroundColor="#4B0082" 
+                        TextColor="White" 
+                        CornerRadius="10"
+                        Clicked="OnSaveButtonClicked" />
+
+                
+                <Button Text="Show on Map" 
+                        Grid.Row="0" 
+                        Grid.Column="1" 
+                        BackgroundColor="#4B0082" 
+                        TextColor="White" 
+                        CornerRadius="10"
+                        Clicked="OnShowMapButtonClicked" />
+
+                
+                <Button Text="Delete Shop" 
+                        Grid.Row="1" 
+                        Grid.ColumnSpan="2" 
+                        BackgroundColor="#4B0082" 
+                        TextColor="White" 
+                        CornerRadius="10"
+                        Clicked="OnDeleteButtonClicked" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
